@@ -17,6 +17,11 @@
     <h1>Кино.бай</h1>
     <p>Кино на любой вкус</p>
 
+    <form>
+    <input type="search" name="q" placeholder="Поиск">
+     <input type="submit" value="Искать">
+    </form>
+
 <nav>
   <ul style="list-style-type:none" role="menubar">
 <li><a href = "#">Афиша</a></li>
@@ -83,6 +88,34 @@
     </article>
   </main>
 <br>
+
+<hr />
+
+ <form method="post">
+      <label for="Имя Фамилия">Имя Фамилия:</label><br>
+   <input type="fullname" size="25" required><br>
+      <label for="Почта">Почта:</label><br>
+   <input type="email" size="25" required><br>
+
+<br>
+   <details>
+<summary>Дополнительная информация</summary>
+<fieldset>
+  <legend><label for="Пол">Пол:</label></legend>
+   <input type="radio" name="sex" value="Мужской">Мужской
+   <input type="radio" name="sex" value="Женский">Женский<br>
+</fieldset>
+</details><br>
+
+<label><input type="checkbox">Буду рекомендовать фильм</label><br>
+
+
+   <textarea name="comment" cols="40" rows="3"></textarea>
+   <br>
+  <input type="submit" value="Добавить комментарий">
+</form><br>
+
+<hr />
       <footer>
           <address>За какой-либо информацией обращайтесь по адресу <strong><a href="mailto:john.smith@gmail.com">john.smith@gmail.com</a></strong></address>
           <p><small>&#169; <time datetime="2018-03-08">2018</time>, Кино.бай</small></p>
