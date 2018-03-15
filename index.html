@@ -3,23 +3,44 @@
 <head>
     <meta charset="utf-8" />
     <title>Кино.бай</title>
+<style>
+
+.colortext {
+     color: #f60;
+   }
+
+.textshadow {
+  color: #f60; text-shadow: 5px 5px #4a4a4a;
+  }
+
+body {
+  font-family: tahoma;
+  }
+
+  a {
+      text-decoration: none;
+  }
+
+  .podcherk {
+	text-decoration: underline
+	}
+
+
+</style>
+
 </head>
+
+
 <body>
 
 <header>
 
-    <p>
-        <strong>Внимание! </strong>Этот сайт не использует технологии
-        <abbr title="Cascading Style Sheets">CSS</abbr> и JavaScript, он создан только при помощи
-        <abbr title="Hypertext Markup Language">HTML</abbr>
-    </p>
-
-    <h1>Кино.бай</h1>
+    <h1 class="textshadow">Кино.бай</h1>
     <p>Кино на любой вкус</p>
 
       <form>
       <input type="search" name="q" placeholder="Поиск">
-       <input type="submit" value="Искать">
+      <input type="submit" value="Искать">
       </form>
 
 <nav>
@@ -28,25 +49,20 @@
 <li><a href = "#">Фильмы</a></li>
 <li><a href = "#">Рейтинги</a></li>
 <li><a href = "#">Журнал</a></li>
-<li><a href = "#">Оскар 2018</a></li>
+<li><a class="colortext" href = "#">Оскар 2018</a></li>
 </nav>
 
-    <blockquote>
-        Бедствием немого кино были ненужные надписи,<br />
-        бедствием нынешнего — ненужные диалоги.<br />
-        <cite>Рене Клер</cite>
-    </blockquote>
+
 
 </header>
 
 <main>
-    <p>Результаты поиска по запросу: <strong><mark>Властелин колец</mark></strong></p>
+    <p>Результаты поиска по запросу: <strong><mark class="colortext">Властелин колец</mark></strong></p>
     <hr />
 
     <article>
         <header>
-            <h1>
-                <a href = "film_page.html"><mark>Властелин колец</mark>: Возвращение Короля</a>
+            <h1 class="redtext"><a class="colortext" href = "film_page.html"><mark class="colortext">Властелин колец</mark>: Возвращение Короля</a>
             </h1>
         </header>
         <section>
@@ -81,7 +97,7 @@
     <article>
         <header>
             <h1>
-                <a href = "film_page1.html"><mark>Властелин колец</mark>: Две крепости</a>
+                <a class="colortext" href = "film_page1.html"><mark class="colortext">Властелин колец</mark>: Две крепости</a>
             </h1>
         </header>
         <section>
@@ -117,7 +133,7 @@
     <article>
         <header>
             <h1>
-                <a href = "film_page2.html"><mark>Властелин колец</mark>: Братство кольца</a>
+                <a class="colortext" href = "film_page2.html"><mark class="colortext">Властелин колец</mark>: Братство кольца</a>
             </h1>
         </header>
         <section>
@@ -153,7 +169,7 @@
 
 <aside>
   <header>
-    <h1>Скоро на сайте</h1>
+    <h1 class="colortext">Скоро на сайте</h1>
   </header>
   <section>
     <h1>Чёрная Пантера</h1>
@@ -172,9 +188,18 @@
   </section>
 </aside>
 
+
 <footer>
-  <a href="#top">Наверх страницы</a>
-    <address>За какой-либо информацией обращайтесь по адресу <strong><a href="mailto:john.smith@gmail.com">john.smith@gmail.com</a></strong></address>
+  <h2 class="colortext">Цитата дня</h2>
+
+  <blockquote>
+      Бедствием немого кино были ненужные надписи,<br />
+      бедствием нынешнего — ненужные диалоги.<br />
+      <cite>Рене Клер</cite>
+  </blockquote>
+
+  <a class="podcherk" href="#top">Наверх страницы</a>
+    <address>За какой-либо информацией обращайтесь по адресу <strong><a class="podcherk" href="mailto:john.smith@gmail.com">john.smith@gmail.com</a></strong></address>
     <p><small>&#169; <time datetime="2018-03-07">2018</time>, Кино.бай</small></p>
 </footer>
 
