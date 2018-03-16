@@ -1,207 +1,338 @@
 <!DOCTYPE HTML>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
-    <title>Кино.бай</title>
+      <title>Кино.бай</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 <style>
+  body {
+      background: url("back.jpg");
+      background-size: cover;
+      background-attachment: fixed;
+      font-family: tahoma;
+      }
 
-.colortext {
-     color: #f60;
-   }
+  .colortext {
+     color: #f60 !important;
+      }
 
-.textshadow {
-  color: #f60; text-shadow: 5px 5px #4a4a4a;
-  }
-
-body {
-  font-family: tahoma;
-  }
-
-  a {
-      text-decoration: none;
-  }
+  .textshadow {
+      color: #f9f9f9; text-shadow: 5px 5px #4a4a4a;
+      }
 
   .podcherk {
 	text-decoration: underline
-	}
+	   }
 
+  .container1 {
+    background: #585858;
+    padding: 30px; /* Поля */
+    color: white; /* Цвет текста */
+    min-height: 48px;
+    width: 70%;
+    height: 150px;
+    margin: 0 auto;
+    padding: 15px;
+    min-width: 550px;
+    border-radius: 15px 15px 0 0;
+    margin-top: 30px;
+    }
 
+  .menucontainer {
+    background: #525252; /
+    color: white;
+    margin: 0 auto;
+    padding: 15px;
+    width: 70%;
+    height: 120px;
+    border-top: 0.5px solid white;
+    }
+
+  .footered {
+    background: #585858;
+    margin: 0 auto;
+    border-radius: 0 0 15px 15px;
+    width: 70%;
+    color: white;
+    height: 80px;
+    padding: 15px;
+    margin-bottom: 30px;
+    }
+
+  .soononthesite {
+    background: white;
+    margin: 0 auto;
+    border-radius: 0 0 0 0;
+    width: 70%;
+    color: black;
+    padding: 15px;
+    margin-bottom: 15px;
+    }
+
+  .mainheader{
+    background: linear-gradient(to top, #e5e6e8, #f7faff);
+    border-radius: 0 0 0 0;
+    border-left: 7px solid #f60;
+    margin: 0 auto;
+    padding: 5px;
+    margin-top: -15px;
+    margin-left: -15px;
+    margin-right: -15px;
+    }
+
+  .searchresult {
+    background: white;
+    margin: 0 auto;
+    border-radius: 0 0 0 0;
+    width: 70%;
+    color: black;
+    padding: 15px;
+    margin-bottom: -10px;
+    margin-top: 10px;
+    }
+
+  .films {
+    background: linear-gradient(to top, #e5e6e8, #f7faff);
+    border-radius: 0 0 0 0;
+    border-left: 7px solid #f60;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 10px;
+    margin-left: -15px;
+    margin-right: -15px;
+    }
+
+  .film01 {
+    background: linear-gradient(to top, #e5e6e8, #f7faff);
+    border-radius: 0 0 0 0;
+    border-left: 7px solid #f60;
+    margin: 0 auto;
+    padding: 1px;
+    margin-top: 10px;
+    margin-left: -15px;
+    margin-right: -15px;
+    }
+
+  .films1 {
+    background: white;
+    margin: 0 auto;
+    border-radius: 0 0 0 0;
+    width: 70%;
+    color: black;
+    padding: 15px;
+    margin-bottom: 15px;
+    margin-top: 11px;
+    }
+
+  .quote {
+    background: linear-gradient(to top, #e5e6e8, #f7faff);
+    border-radius: 0 0 0 0;
+    border-left: 7px solid #f60;
+    margin: 0 auto;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: -15px;
+    margin-right: -15px;
+    }
+
+  a {
+    text-decoration: none;
+    color: white; /* Цвет ссылок */
+    }
+   a:visited {
+    color: white; /* Цвет посещенных ссылок */
+    }
+   a:active {
+    color: white; /* Цвет активных ссылок */
+    }
+    a:hover {
+    color: #f9e2c2; /* Цвет ссылки при наведении на нее курсора мыши */
+    }
 </style>
 
 </head>
+  <body>
+    <header>
 
-
-<body>
-
-<header>
-
+<div class="container1">
     <h1 class="textshadow">Кино.бай</h1>
     <p>Кино на любой вкус</p>
 
-      <form>
-      <input type="search" name="q" placeholder="Поиск">
-      <input type="submit" value="Искать">
-      </form>
 
-<nav>
-  <ul style="list-style-type:none" role="menubar">
-<li><a href = "#">Афиша</a></li>
-<li><a href = "#">Фильмы</a></li>
-<li><a href = "#">Рейтинги</a></li>
-<li><a href = "#">Журнал</a></li>
-<li><a class="colortext" href = "#">Оскар 2018</a></li>
-</nav>
+  <form>
+    <input type="search" name="q" placeholder="Поиск">
+      <button type="submit"><span class="fa fa-search"></span></button>
+  </form>
+</div>
+
+
+<div class="menucontainer">
+      <nav>
+          <ul style="list-style-type:none" role="menubar">
+              <li><a href = "#">Афиша</a></li>
+              <li><a href = "#">Фильмы</a></li>
+              <li><a href = "#">Рейтинги</a></li>
+              <li><a href = "#">Журнал</a></li>
+              <li><a href = "#">Оскар 2018</a></li>
+      </nav>
+</div>
 
 
 
 </header>
+    <main>
+        <div class="searchresult"><p>Результаты поиска по запросу: <strong class="colortext">Властелин колец</strong></p></div>
 
-<main>
-    <p>Результаты поиска по запросу: <strong><mark class="colortext">Властелин колец</mark></strong></p>
-    <hr />
 
+<div class="films1">
     <article>
         <header>
-            <h1 class="redtext"><a class="colortext" href = "film_page.html"><mark class="colortext">Властелин колец</mark>: Возвращение Короля</a>
-            </h1>
+            <div class="film01"><h1 class="redtext"><a class="colortext" href = "film_page.html">Властелин колец: Возвращение Короля</a></h1></div>
         </header>
-        <section>
-
-          <figure>
-   <img src="img1.jpg" >
-    <figcaption>Обложка фильма</figcaption>
-          </figure>
-
-            <h1>Описание</h1>
-            <p>
+          <section>
+            <figure>
+              <img src="img1.jpg" >
+                <figcaption>Обложка фильма</figcaption>
+            </figure>
+                <h1 class="colortext">Описание</h1>
+                  <p>
                 Последняя часть трилогии о Кольце Всевластия и о героях, взявших на себя бремя спасения Средиземья.
                 Повелитель сил Тьмы Саурон направляет свои бесчисленные рати под стены Минас-Тирита, крепости Последней Надежды.
-            </p>
-        </section>
-        <section>
-            <h1>Актеры</h1>
-            <p>
+                  </p>
+          </section>
+
+          <section>
+                <h1 class="colortext">Актеры</h1>
+                  <p>
                 Элайджа Вуд, Вигго Мортенсен, Шон Эстин, Иэн МакКеллен, Орландо Блум, Доминик Монахэн, Билли Бойд, Энди Серкис, Миранда Отто, Бернард Хилл
-            </p>
+                  </p>
         </section>
-        <footer>
+          <footer>
             <p>
                 <strong>Год:</strong> <time datetime="2003-12-23">2003</time>,
                 <strong>Оценка IMDb:</strong> 8.90 <small>(1 349 172)</small>,
                 <strong>Бюджет:</strong> $94 000 000,
                 <strong>Страна:</strong> США
             </p>
-        </footer>
-    </article>
+          </footer>
+      </article>
     <br />
-    <article>
+      <article>
         <header>
             <h1>
-                <a class="colortext" href = "film_page1.html"><mark class="colortext">Властелин колец</mark>: Две крепости</a>
+                <div class="films"><a class="colortext" href = "film_page1.html">Властелин колец: Две крепости</a></div>
             </h1>
         </header>
-        <section>
-
+      <section>
           <figure>
             <img src="img3.jpg" >
-            <figcaption>Обложка фильма</figcaption>
+              <figcaption>Обложка фильма</figcaption>
           </figure>
 
-            <h1>Описание</h1>
-            <p>
+            <h1 class="colortext">Описание</h1>
+              <p>
                 Братство распалось, но Кольцо Всевластья должно быть уничтожено.
                 Фродо и Сэм вынуждены доверить свои жизни Голлуму, который взялся провести их к вратам Мордора.
                 Громадная Армия Сарумана приближается: члены братства и их союзники готовы принять бой.
-            </p>
+              </p>
         </section>
         <section>
-            <h1>Актеры</h1>
-            <p>
+            <h1 class="colortext">Актеры</h1>
+              <p>
                 Элайджа Вуд, Шон Эстин, Орландо Блум, Вигго Мортенсен, Иэн МакКеллен, Доминик Монахэн, Миранда Отто, Джон Рис-Дэвис, Энди Серкис, Билли Бойд
-            </p>
+              </p>
         </section>
-        <footer>
+          <footer>
             <p>
                 <strong>Год:</strong> <time datetime="2003-12-23">2002</time>,
                 <strong>Оценка IMDb:</strong> 8.70 <small>(1 221 214)</small>,
                 <strong>Бюджет:</strong> $94 000 000,
                 <strong>Страна:</strong> США
             </p>
-        </footer>
-    </article>
+          </footer>
+      </article>
     <br />
-    <article>
+      <article>
         <header>
             <h1>
-                <a class="colortext" href = "film_page2.html"><mark class="colortext">Властелин колец</mark>: Братство кольца</a>
+                <div class="films"><a class="colortext" href = "film_page2.html">Властелин колец: Братство кольца</a></div>
             </h1>
         </header>
-        <section>
 
-          <figure>
+      <section>
+        <figure>
             <img src="img2.jpg" >
-            <figcaption>Обложка фильма</figcaption>
-          </figure>
-
-            <h1>Описание</h1>
-            <p>
+              <figcaption>Обложка фильма</figcaption>
+        </figure>
+            <h1 class="colortext">Описание</h1>
+              <p>
                 Сказания о Средиземье — это хроника Великой войны за Кольцо, войны, длившейся не одну тысячу лет.
                 Тот, кто владел Кольцом, получал власть над всеми живыми тварями, но был обязан служить злу.
-            </p>
+              </p>
         </section>
         <section>
-            <h1>Актеры</h1>
-            <p>
+            <h1 class="colortext">Актеры</h1>
+              <p>
                 Элайджа Вуд, Иэн МакКеллен, Вигго Мортенсен, Шон Бин, Орландо Блум, Джон Рис-Дэвис, Иэн Холм, Шон Эстин, Билли Бойд, Доминик Монахэн
-            </p>
+              </p>
         </section>
-        <footer>
+          <footer>
             <p>
                 <strong>Год:</strong> <time datetime="2003-12-23">2001</time>,
                 <strong>Оценка IMDb:</strong> 8.80 <small>(1 389 831)</small>,
                 <strong>Бюджет:</strong> $93 000 000,
                 <strong>Страна:</strong> США
             </p>
-        </footer>
-    </article>
+          </footer>
+        </article>
     <br />
 </main>
+</div>
 
-<aside>
-  <header>
-    <h1 class="colortext">Скоро на сайте</h1>
-  </header>
+<div class="soononthesite">
+  <aside>
+    <div class="mainheader">
+      <header>
+        <h1 class="colortext">Скоро на сайте</h1>
+      </header>
+    </div>
+
   <section>
-    <h1>Чёрная Пантера</h1>
-    <p>
-      С первого взгляда можно решить, что Ваканда — обычная территория дикой Африки, но это не так. Здесь, в недрах пустынных земель, скрываются залежи уникального металла, способного поглощать вибрацию. Многие пытались добраться до него, разоряя всё на своём пути и принося смерть аборигенам, но каждый раз таинственный дух саванны — Чёрная Пантера — вставал на защиту угнетённых.
-      <br /><small>Читать далее...</small>
-    </p>
+    <h1 class="colortext">Чёрная Пантера</h1>
+      <p>
+        С первого взгляда можно решить, что Ваканда — обычная территория дикой Африки, но это не так. Здесь, в недрах пустынных земель, скрываются залежи уникального металла, способного поглощать вибрацию. Многие пытались добраться до него, разоряя всё на своём пути и принося смерть аборигенам, но каждый раз таинственный дух саванны — Чёрная Пантера — вставал на защиту угнетённых.
+        <br /><small>Читать далее...</small>
+      </p>
   </section>
+  <br>
   <section>
-    <h1>Мстители: Война бесконечности</h1>
-    <p>
-      Пока Мстители и их союзники продолжают защищать мир от различных опасностей, с которыми не смог бы справиться один супергерой, новая угроза возникает из космоса: Танос.
-      Межгалактический тиран преследует цель собрать все шесть Камней Бесконечности — артефакты невероятной силы, с помощью которых можно менять реальность по своему желанию.
-      <br /><small>Читать далее...</small>
-    </p>
+    <h1 class="colortext">Мстители: Война бесконечности</h1>
+      <p>
+        Пока Мстители и их союзники продолжают защищать мир от различных опасностей, с которыми не смог бы справиться один супергерой, новая угроза возникает из космоса: Танос.
+        Межгалактический тиран преследует цель собрать все шесть Камней Бесконечности — артефакты невероятной силы, с помощью которых можно менять реальность по своему желанию.
+        <br /><small>Читать далее...</small>
+      </p>
   </section>
+
+
+  <div class="quote"><h2 class="colortext">Цитата дня</h2></div>
+        <blockquote>
+    Бедствием немого кино были ненужные надписи,<br />
+    бедствием нынешнего — ненужные диалоги.<br />
+    <cite>Рене Клер</cite>
+        </blockquote>
+  </div>
 </aside>
 
 
-<footer>
-  <h2 class="colortext">Цитата дня</h2>
-
-  <blockquote>
-      Бедствием немого кино были ненужные надписи,<br />
-      бедствием нынешнего — ненужные диалоги.<br />
-      <cite>Рене Клер</cite>
-  </blockquote>
-
+<div class="footered"><footer>
   <a class="podcherk" href="#top">Наверх страницы</a>
     <address>За какой-либо информацией обращайтесь по адресу <strong><a class="podcherk" href="mailto:john.smith@gmail.com">john.smith@gmail.com</a></strong></address>
-    <p><small>&#169; <time datetime="2018-03-07">2018</time>, Кино.бай</small></p>
-</footer>
+      <p><small>&#169; <time datetime="2018-03-07">2018</time>, Кино.бай</small></p>
+  </footer>
+</div>
 
 </body>
 </html>
