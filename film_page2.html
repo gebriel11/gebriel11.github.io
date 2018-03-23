@@ -2,122 +2,361 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Кино.бай</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      /* Normalization */
+      body {
+        background: #d5d5d5 url(back.jpg) 50% 0 no-repeat;
+        color: #333;
+        font: .8em tahoma, verdana, arial normal;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      mark {
+        background: transparent;
+      }
+      a[href="#top"] {
+        position: relative;
+      }
+      a[href="#top"]:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: .35em solid transparent;
+        border-right: .35em solid transparent;
+        border-bottom: .7em solid currentColor;
+        position: absolute;
+        top: .3em;
+        left: 3.7em;
+      }
+      a:hover, mark, h1,
+      .content article > header,
+      .content aside > header {
+        color: #f60;
+      }
+      h1, h1 a {
+        font-size: 1.3em;
+        font-weight: normal;
+      }
+      img {
+        height: 25em;
+      }
+      blockquote, figure {
+        margin: 0;
+        padding: 0;
+      }
+      figcaption {
+        text-align: center;
+        font-size: .9em;
+      }
+      /* Header and Footer */
+      .header-container,
+      .menubar-container ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .header-container {
+        justify-content: space-between;
+      }
+      .header-container h1 > a {
+        text-shadow: .12em .12em #4a4a4a;
+        font-size: 2em;
+        font-weight: bold;
+        color: white;
+      }
+      .search-container input[type=search] {
+        font-size: 1em;
+        padding: .5em;
+        border: none;
+      }
+      .search-container button {
+        font-size: 1em;
+        cursor: pointer;
+        border: none;
+        background: #ddd;
+        padding: .5em 1em;
+        float: right;
+      }
+      .search-container button:hover {
+        background: #ccc;
+      }
+      .search-container .fa {
+        color: #8e8e8e;
+      }
+      .menubar-container {
+        background: #525252;
+      }
+      .menubar-container ul {
+        list-style-type: none;
+        justify-content: center;
+        margin: 0;
+        border-top: .1em solid rgba(113, 113, 113, 0.7);
+      }
+      .menubar-container ul > li a,
+      .footer-container {
+        color: rgba(255,255,255,0.7);
+      }
+      .menubar-container ul > li a:hover {
+        color: white;
+        background: #636363;
+      }
+      /* Content */
+      .content section h1 {
+        color: inherit;
+      }
+      .content article > header,
+      .content aside > header {
+        border-left: 4px solid currentColor;
+        background-image: linear-gradient(-180deg, #f3f3f3 0%, #dedede 100%);
+        padding: 1.5em 1.5em;
+      }
+      .header-container,
+      .menubar-container ul,
+      .menubar-container ul > li a,
+      .footer-container,
+      .search-result-message,
+      .content main figure,
+      .content main section,
+      .content aside section,
+      .content article footer {
+        padding: 1em;
+      }
+      /* Center Column  */
+      .center_column {
+        width: 70%;
+        margin: 0 auto;
+        padding: 1.5em;
+        min-width: 550px;
+        --areaBackground: rgb(88, 88, 88);
+      }
+      .content,
+      .movie-description {
+      display: flex;
+      flex-direction: row;
+        --areaBackground: white;
+      }
+      .content > main {
+        flex: 3;
+      }
+      .content > aside {
+        font-size: .8em;
+        flex: 1;
+      }
+      .content > main,
+      .content > aside,
+      .center_column > footer,
+      .center_column > header {
+        margin: 1em;
+        background: var(--areaBackground);
+        box-shadow: 0 .1em .4em .1em rgba(51,51,51,.2);
+      }
+      .center_column > header {
+        border-radius: 1em 1em 0 0;
+      }
+      .center_column > footer {
+        border-radius: 0 0 1em 1em;
+      }
+
+
+
+table {
+    width: 100%; /* Ширина таблицы */
+    background: white; /* Цвет фона таблицы */
+    border-spacing: 7px 7px; /* Расстояние между ячейками */
+
+
+
+   }
+   td {
+     background: #F5DEB3;
+     color: black;
+     padding: 8px;
+     border: 5px solid white;
+     text-align: center;
+   }
+
+   th {
+    background: #f60; /* Цвет фона ячеек */
+    padding: 5px; /* Поля вокруг текста */
+    color: white; /* Цвет текста */
+    text-align: center;
+    border: 5px solid white;
+   }
+
+   .trailer {
+     background: #d5d5d5;
+     padding: 5px;
+     color: #f60;
+   }
+
+
+
+   .comments button {
+     font-size: 1em;
+     cursor: pointer;
+     border: none;
+     padding: .6em 1em;
+     margin-right: 1.6em;
+     background: gray;
+   }
+
+
+   .content .comments {
+     margin: 1em;
+     padding: 2em;
+     background: #e6e6e6;
+   }
+
+   .comments input,
+   .comments textarea {
+     border: none;
+     font-size: 1em;
+     width: 100%;
+   }
+
+   .comments form > div {
+     margin: 1em 0;
+   }
+
+   .comments textarea {
+     height: 10em;
+     resize: none;
+   }
+
+   .comments .required:after {
+     content: ' *';
+     color: red;
+   }
+
+    </style>
+
 </head>
 <body>
+  <div class="center_column">
+    <header>
+        <div class="header-container">
+          <h1><a href="index.html">Кино.бай</a></h1>
 
-<header>
+          <div class="search-container">
+            <form role="search">
+              <input name="search" type="search" placeholder="Поиск..." />
+              <button type="submit" aria-label="Искать"><span class="fa fa-search"></span></button>
+            </form>
+          </div>
+        </div>
 
-    <p>
-        <strong>Внимание! </strong>Этот сайт не использует технологии
-        <abbr title="Cascading Style Sheets">CSS</abbr> и JavaScript, он создан только при помощи
-        <abbr title="Hypertext Markup Language">HTML</abbr>
-    </p>
+        <nav class="menubar-container">
+          <ul role="menubar" aria-orientation="horizontal">
+            <li role="menuitem"><a href="#">Афиша</a></li>
+            <li role="menuitem"><a href="#">Фильмы</a></li>
+            <li role="menuitem"><a href="#">Рейтинги</a></li>
+            <li role="menuitem"><a href="#">Журнал</a></li>
+            <li role="menuitem"><a href="#">Оскар 2018</a></li>
+          </ul>
+        </nav>
 
-    <h1>Кино.бай</h1>
-    <p>Кино на любой вкус</p>
+    </header>
 
-    <form>
-    <input type="search" name="q" placeholder="Поиск">
-     <input type="submit" value="Искать">
-    </form>
-
-<nav>
-  <ul style="list-style-type:none" role="menubar">
-<li><a href = "#">Афиша</a></li>
-<li><a href = "#">Фильмы</a></li>
-<li><a href = "#">Рейтинги</a></li>
-<li><a href = "#">Журнал</a></li>
-<li><a href = "#">Оскар 2018</a></li>
-</nav>
-
-    <blockquote>
-        Бедствием немого кино были ненужные надписи,<br />
-        бедствием нынешнего — ненужные диалоги.<br />
-        <cite>Рене Клер</cite>
-    </blockquote>
-
-</header>
-
+<div class="content">
 <main>
     <article>
         <header>
-            <h1>Властелин колец: Братство кольца</h1>
+            <h1>Властелин колец: Возвращение Короля</h1>
         </header>
         <section>
 
-          <figure>
-   <img src="img2.jpg" >
-    <figcaption>Обложка фильма</figcaption>
-          </figure>
+          <div class="movie-description">
+            <figure>
+              <img src="img2.jpg" />
+              <figcaption>
+                Обложка фильма
+              </figcaption>
+            </figure>
+            <div>
+              <section>
+                  <h1>Описание</h1>
+                  <p>
+                      Сказания о Средиземье — это хроника Великой войны за Кольцо, войны, длившейся не одну тысячу лет. Тот, кто владел Кольцом, получал власть над всеми живыми тварями, но был обязан служить злу.
+                  </p>
+              </section>
+              <section>
+                  <h1>Актеры</h1>
+                  <p>
+                      Элайджа Вуд, Иэн МакКеллен, Вигго Мортенсен, Шон Бин, Орландо Блум, Джон Рис-Дэвис, Иэн Холм, Шон Эстин, Билли Бойд, Доминик Монахэн
+                  </p>
+              </section>
+            </div>
+                </div>
 
-            <h1>Описание</h1>
-            <p>
-              Сказания о Средиземье — это хроника Великой войны за Кольцо, войны, длившейся не одну тысячу лет.
-              Тот, кто владел Кольцом, получал власть над всеми живыми тварями, но был обязан служить злу.
-            </p>
-        </section>
-        <section>
-            <h1>Актеры</h1>
-            <p>
-                Элайджа Вуд, Иэн МакКеллен, Вигго Мортенсен, Шон Бин, Орландо Блум, Джон Рис-Дэвис, Иэн Холм, Шон Эстин, Билли Бойд, Доминик Монахэн
-            </p>
-            <h1>Трейлер фильма</h1>
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/4BE5u9itrsY" frameborder="0" allowfullscreen></iframe>
-        </section>
-          <footer>
-          <table border="1">
-                    <caption>Информация</caption>
-            <tbody>
-              <tr>
-                <th>Год</th>
-                <th>Оценка</th>
-                <th>Бюджет</th>
-                <th>Страна</th>
-              </tr>
-              <tr>
-                <td><time datetime="2001-12-23">2001</time></td>
-                <td>8.80 <small>(1 389 831)</small></td>
-                <td>$93 000 000</td>
-                <td>США</td>
-              </tr>
-            </tbody>
-          </table>
+
+
+              <div class="trailer"><h1>Трейлер</h1></div>
+<br>
+
+                <div class="embed-responsive embed-responsive-16by9">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/4BE5u9itrsY" frameborder="0" allowfullscreen></iframe>
+</div>
+<br>
+
+
+<footer>
+<table>
+   <tr>
+     <th>Год</th>
+     <th><div id="IMDb" data-description="IMDb">Оценка IMDb</div></th>
+     <th>Бюджет</th>
+     <th>Страна</th>
+   </tr>
+   <tr>
+     <td><time datetime="2001-12-23">2001</time></td>
+     <td>8.80 <small>(1 389 831)</small></td>
+     <td>$93 000 000</td>
+     <td>США</td>
+   </tr>
+  </table>
+
+
+<br>
+
+<section class="comments">
+  <form>
+    <div>
+      <label class="required" for="username">Имя</label>
+      <input id="username" name="username" type="text" required />
+    </div>
+    <div>
+      <label class="required" for="email">Почта</label>
+      <input id="email" name="email" type="email" required />
+    </div>
+    <div>
+      <div>
+        <label class="required" for="comment">Комментарий</label>
+        <textarea id="comment" name="comment" required></textarea>
+      </div>
+      <button type="submit">Добавить комментарий</button>
+    </div>
+  </form>
+</section>
+
+
         </footer>
     </article>
   </main>
-<br>
 
-<hr />
-
- <form method="post">
-      <label for="fullname">Имя Фамилия:</label><br>
-   <input type="fullname" name="fullname" size="25" id="fullname" required><br>
-      <label for="email">Почта:</label><br>
-   <input type="email" name="email" size="25" id="email" required><br>
-
-<br>
-   <details>
-<summary>Дополнительная информация</summary>
-<fieldset>
-  <legend>Пол:</label></legend>
-   <input type="radio" name="sex" value="Мужской">Мужской
-   <input type="radio" name="sex" value="Женский">Женский<br>
-</fieldset>
-</details><br>
-
-<label><input type="checkbox">Буду рекомендовать фильм</label><br>
+</div>
 
 
-   <textarea name="comment" cols="40" rows="3"></textarea>
-   <br>
-  <input type="submit" value="Добавить комментарий">
-</form><br>
-
-<hr />
-      <footer>
-          <address>За какой-либо информацией обращайтесь по адресу <strong><a href="mailto:john.smith@gmail.com">john.smith@gmail.com</a></strong></address>
-          <p><small>&#169; <time datetime="2018-03-08">2018</time>, Кино.бай</small></p>
-      </footer>
+<footer>
+  <div class="footer-container">
+    <a href="#top">Наверх</a>
+    <address>За какой-либо информацией обращайтесь по адресу <a type="author" href="mailto:john.smith@gmail.com"><strong>john.smith@gmail.com</strong></a></address>
+    <p><small>© <time datetime="2018-03-23">2018</time>, Кино.бай</small></p>
+  </div>
+</footer>
   </body>
   </html>
