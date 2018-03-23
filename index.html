@@ -5,7 +5,7 @@
     <!-- <base href="https://archik408.github.io/index.html" /> -->
     <title>Кино.бай</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="12345.css">
     <style>
       /* Normalization */
       body {
@@ -162,14 +162,22 @@
       .center_column > footer {
         border-radius: 0 0 1em 1em;
       }
+      a:hover {
+        filter: url(#filter);
+      }
     </style>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+     <defs><filter id="filter">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+      </filter>
+     </defs>
+    </svg>
 </head>
 <body>
   <div class="center_column">
-    <header>
-        <div class="header-container">
+        <header>
+          <div class="header-container">
           <h1><a href="index.html">Кино.бай</a></h1>
-
           <div class="search-container">
             <form role="search">
               <input name="search" type="search" placeholder="Поиск..." />
@@ -201,7 +209,7 @@
           <article>
               <header>
                   <h1>
-                    <a href="page1.html">
+                    <a href="film_page.html">
                       <mark>Властелин колец</mark>: Возвращение Короля
                     </a>
                   </h1>
@@ -241,7 +249,7 @@
           <article>
               <header>
                   <h1>
-                    <a href="page2.html">
+                    <a href="film_page1.html">
                       <mark>Властелин колец</mark>: Две крепости
                     </a>
                   </h1>
@@ -282,7 +290,7 @@
           <article>
               <header>
                   <h1>
-                    <a href="page3.html">
+                    <a href="film_page2.html">
                       <mark>Властелин колец</mark>: Братство кольца
                     </a>
                   </h1>
