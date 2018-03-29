@@ -5,7 +5,6 @@
     <!-- <base href="https://archik408.github.io/index.html" /> -->
     <title>Кино.бай</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="12345.css">
     <style>
       /* Normalization */
       body {
@@ -165,6 +164,22 @@
       a:hover {
         filter: url(#filter);
       }
+      svg { display: none; }
+
+      .ert /*фильтр для картинки*/
+                    {
+                        -webkit-transition: all 1.5s ease-out;
+                    }
+
+      .ert:hover /*фильтр для картинки*/
+                    {
+                        -webkit-transform: scale(2) rotateZ(720deg);
+                        -ms-transform: scale(2) rotateZ(720deg);
+                        transform: scale(2) rotateZ(720deg);
+                        -webkit-transition: all 1.5s ease-out;
+                        filter: saturate(300%);
+                        opacity: 1;
+                      }
     </style>
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
      <defs><filter id="filter">
@@ -216,7 +231,9 @@
               </header>
               <div class="movie-description">
                 <figure>
-                  <img src="img1.jpg" />
+                  <div class="ert">
+                    <img src="img1.jpg" />
+                  </div>
                   <figcaption>
                     Обложка фильма
                   </figcaption>
@@ -256,7 +273,9 @@
               </header>
               <div class="movie-description">
                 <figure>
-                  <img src="img3.jpg" />
+                    <div class="ert">
+                      <img src="img3.jpg" />
+                    </div>
                   <figcaption>
                     Обложка фильма
                   </figcaption>
@@ -297,7 +316,9 @@
               </header>
               <div class="movie-description">
                 <figure>
-                  <img src="img2.jpg" />
+                    <div class="ert">
+                      <img src="img2.jpg" />
+                    </div>
                   <figcaption>
                     Обложка фильма
                   </figcaption>
