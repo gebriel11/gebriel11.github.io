@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+  body {
+    background: #d5d5d5 url(back.jpg) 50% 0 no-repeat;
+    color: #333;
+    font: .8em tahoma, verdana, arial normal;
+      }
+</style>
+
+<body>
+  <button id="calc">
+    Калькулятор
+  </button>
+    <script>
+        var button = document.getElementById("calc");
+        button.onclick = function () {
+        var a = prompt ("Значение 1", 0);
+        var b = prompt ("Значение 2", 0);
+        var c = prompt ("Значение 3", 0);
+        alert("Результат" + (window.parseInt(a) + window.parseInt(b) + window.parseInt(c)))};
+    </script>
+</body>
+</html>
