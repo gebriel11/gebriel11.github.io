@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+      <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+        <title>Калькулятор2</title>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <body>
+    <button id="calc2">
+      Калькулятор2
+    </button>
+
+  <script>
+  var button = document.getElementById("calc2");
+  button.onclick = function () {
+   'calc2';
+
+   function factorial(num){
+     if(num === 0 || num === 1){
+       return 1;
+     }
+     for(var prev = num - 1; prev >= 1; prev--){
+       num = num * prev;
+     }
+     return num;
+   }
+
+   var repeat = true, answer = null, random = 0;
+
+   while(repeat) {
+     answer = prompt('1 + 1 = ?');
+
+     if (2 === parseInt(answer)) {
+       repeat = confirm('Верно. Следующий вопрос');
+
+       if (repeat) {
+         random = Math.floor(Math.random() * (4 - 1)) + 1;
+         answer = prompt('f(' + random  + ') = ?');
+
+         if (factorial(random) === parseInt(answer)) {
+           repeat = confirm('Верно. Повторить?');
+         } else {
+           repeat = confirm('Неверно. Повторить?');
+         }
+       }
+     } else {
+       repeat = confirm('Неверно. Повторить?');
+     }
+   }}
+      </script>
+    </head>
+  </body>
+</html>
